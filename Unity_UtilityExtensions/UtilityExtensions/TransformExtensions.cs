@@ -5,7 +5,9 @@ namespace UtilityExtensions
 {
 	public static class TransformExtensions
 	{
-
+		/// <summary>
+		/// Recursively find the first child component with specified tag.
+		/// </summary>
 		public static T FindComponentInChildWithTag<T>(this Transform parent, string tag) where T : Component
 		{
 			Transform t = parent.transform;
@@ -24,6 +26,9 @@ namespace UtilityExtensions
 			return null;
 		}
 
+		/// <summary>
+		/// Recursively find all child components with specified tag.
+		/// </summary>
 		public static List<T> FindComponentsInChildWithTag<T>(this Transform parent, string tag) where T : Component
 		{
 			Transform t = parent.transform;
@@ -40,6 +45,9 @@ namespace UtilityExtensions
 			return children;
 		}
 
+		/// <summary>
+		/// Destroy all child transforms
+		/// </summary>
 		public static void DestroyAllChildren(this Transform _parent)
 		{
 			List<Transform> children = new List<Transform> ();

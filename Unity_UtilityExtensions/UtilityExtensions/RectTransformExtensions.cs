@@ -4,6 +4,23 @@ namespace UtilityExtensions
 {
 	public static class RectTransformExtensions
 	{
+		public static void AnchorToCorners(this RectTransform transform)
+		{
+			if (transform.parent == null)
+				return;
+
+			var parent = transform.parent.GetComponent<RectTransform> ();
+
+			Vector2 newAnchorsMin = new Vector2 (transform.anchorMin.x + transform.offsetMin.x / parent.rect.width,
+							  transform.anchorMin.y + transform.offsetMin.y / parent.rect.height);
+
+			Vector2 newAnchorsMax = new Vector2 (transform.anchorMax.x + transform.offsetMax.x / parent.rect.width,
+							  transform.anchorMax.y + transform.offsetMax.y / parent.rect.height);
+
+			transform.anchorMin = newAnchorsMin;
+			transform.anchorMax = newAnchorsMax;
+			transform.offsetMin = transform.offsetMax = new Vector2 (0, 0);
+		}
 
 		public static void SetDefaultScale(this RectTransform trans)
 		{

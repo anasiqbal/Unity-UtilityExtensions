@@ -7,7 +7,7 @@ namespace UtilityExtensions
 		/// <summary>
 		/// Check if the date is between two dates.
 		/// </summary>
-		public static bool Between (this DateTime date, DateTime startDate, DateTime endDate)
+		public static bool IsBetween (this DateTime date, DateTime startDate, DateTime endDate)
 		{
 			return date.Ticks >= startDate.Ticks && date.Ticks <= endDate.Ticks;
 		}

@@ -35,7 +35,6 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="UnityEngine">
@@ -43,7 +42,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UtilityExtensions\CoroutineExtensions.cs" />
     <Compile Include="UtilityExtensions\DateTimeExtensions.cs" />
@@ -54,7 +52,7 @@
     <Compile Include="UtilityExtensions\TransformExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="UtilityExtensions\README.md" />
+    <None Include="README.md" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
